@@ -10,7 +10,7 @@ foreach (lcode_test ${LCODETEST})
     add_dependencies(build-tests ${lcode_test_name})
     add_dependencies(check-tests ${lcode_test_name})
 
-    target_link_libraries(${lcode_test_name} lcode_shared gtest gmock_main)
+    target_link_libraries(${lcode_test_name} lcode_shared lcode_ds gtest gmock_main)
 
     message("my_test=${lcode_test_name}")
     set_target_properties(${lcode_test_name}
